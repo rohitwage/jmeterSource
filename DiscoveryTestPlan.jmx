@@ -12092,12 +12092,12 @@ this.interpreter.setOut(p);
 
 if(tC01_StatusFlag.equals(true) &amp;&amp; tC03_StatusFlagPost.equals(&quot;true&quot;) &amp;&amp; tC03_StatusFlagGET.equals(&quot;true&quot;)){
 
-p.println(&quot;Discovery | TEST: PASSED,&quot;+date+&quot;,&quot;+Time+&quot;&quot;);	
+p.println(&quot;Discovery | TEST: PASSED,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;|&quot;);	
 
 }
 else{
 
-p.println(&quot;Discovery | TEST: FAILED,&quot;+date+&quot;,&quot;+Time+&quot;&quot;);	
+p.println(&quot;Discovery | TEST: FAILED,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;|&quot;);	
 }
 
 f.close();</stringProp>
