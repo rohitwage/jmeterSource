@@ -137,7 +137,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T01_LaunchURL" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T01_LaunchURL" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -415,12 +415,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T01_LaunchURL,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T01_LaunchURL,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T01_LaunchURL,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T01_LaunchURL,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -1794,7 +1794,7 @@ f.close();</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T02_ClickLogin" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T02_ClickLogin" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -2402,12 +2402,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T02_ClickLogin,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T02_ClickLogin,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -5253,7 +5253,7 @@ f.close();</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T03_ClickFvrt" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T03_ClickFvrt" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -5404,12 +5404,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T03_ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T03_ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T03_ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T03_ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -5426,7 +5426,7 @@ f.close();</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T04_ClickDiscoverySche" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T04_ClickDiscoverySche" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -5617,12 +5617,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T04_ClickDiscoverySche,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T04_ClickDiscoverySche,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T04_ClickDiscoverySche,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T04_ClickDiscoverySche,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -6385,7 +6385,7 @@ f.close();</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T05_SearchAutomatedAndClick" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T05_SearchAutomatedAndClick" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -6620,12 +6620,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T05_SearchAutomatedAndClick,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T05_SearchAutomatedAndClick,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T05_SearchAutomatedAndClick,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T05_SearchAutomatedAndClick,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -7094,7 +7094,7 @@ f.close();</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T06_ClickSearchResult_Automated_Result" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T06_ClickSearchResult_Automated_Result" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -7306,12 +7306,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -9004,7 +9004,7 @@ vars.put(&quot;Status&quot;,&quot;PASSED&quot;);</stringProp>
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T07_Click_on_DiscNow" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T07_Click_on_DiscNow" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -9420,12 +9420,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;T07_Click_on_DiscNow,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T07_Click_on_DiscNow,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -9727,7 +9727,7 @@ f.close();</stringProp>
             </DebugSampler>
             <hashTree/>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T08_DiscoveryStatus" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T08_DiscoveryStatus" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
@@ -10430,6 +10430,96 @@ f.close();</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
+              <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Devices_" enabled="true">
+                <stringProp name="XPathExtractor.default">NoMatch</stringProp>
+                <stringProp name="XPathExtractor.refname">Device</stringProp>
+                <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
+                <stringProp name="XPathExtractor.xpathQuery">//table[@id=&quot;discovery_status.discovery_device_history.status_table&quot;]/tbody[@class=&quot;list2_body&quot;]/tr/td[3]/a</stringProp>
+                <boolProp name="XPathExtractor.validate">false</boolProp>
+                <boolProp name="XPathExtractor.tolerant">true</boolProp>
+                <boolProp name="XPathExtractor.namespace">false</boolProp>
+              </XPathExtractor>
+              <hashTree/>
+              <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Completed_activities" enabled="true">
+                <stringProp name="XPathExtractor.default">NoMatch</stringProp>
+                <stringProp name="XPathExtractor.refname">Completed_activity</stringProp>
+                <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
+                <stringProp name="XPathExtractor.xpathQuery">//table[@id=&quot;discovery_status.discovery_device_history.status_table&quot;]/tbody[@class=&quot;list2_body&quot;]/tr/td[7]</stringProp>
+                <boolProp name="XPathExtractor.validate">false</boolProp>
+                <boolProp name="XPathExtractor.tolerant">true</boolProp>
+                <boolProp name="XPathExtractor.namespace">false</boolProp>
+              </XPathExtractor>
+              <hashTree/>
+              <XPathAssertion guiclass="XPathAssertionGui" testclass="XPathAssertion" testname="Devies_Validations" enabled="true">
+                <boolProp name="XPath.negate">false</boolProp>
+                <stringProp name="XPath.xpath">//table[@id=&quot;discovery_status.discovery_device_history.status_table&quot;]/tbody[@class=&quot;list2_body&quot;]/tr[1]/td[3]/a</stringProp>
+                <boolProp name="XPath.validate">false</boolProp>
+                <boolProp name="XPath.whitespace">false</boolProp>
+                <boolProp name="XPath.tolerant">true</boolProp>
+                <boolProp name="XPath.namespace">false</boolProp>
+              </XPathAssertion>
+              <hashTree/>
+              <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>true</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <url>true</url>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_1&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_1&quot;));
+System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_2&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_2&quot;));
+System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_3&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_3&quot;));
+System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_4&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_4&quot;));
+
+boolean SuccessfulDiscovery;
+if(vars.get(&quot;Completed_activity_1&quot;).equals(&quot;Updated CI&quot;)&amp;&amp;vars.get(&quot;Completed_activity_2&quot;).equals(&quot;Updated CI&quot;)&amp;&amp;vars.get(&quot;Completed_activity_3&quot;).equals(&quot;Updated CI&quot;)&amp;&amp;vars.get(&quot;Completed_activity_4&quot;).equals(&quot;Updated CI&quot;))
+{
+	SuccessfulDiscovery = true;
+	vars.put(&quot;SuccessfulDiscovery&quot;,&quot;true&quot;);
+	
+}else{
+SuccessfulDiscovery=false;
+vars.put(&quot;SuccessfulDiscovery&quot;,&quot;false&quot;);
+}
+
+System.out.println(&quot;Successful Discovery :&quot;+SuccessfulDiscovery);
+</stringProp>
+              </BeanShellPostProcessor>
+              <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/guided_tours/tours?page_id=discovery_status&amp;context=%2Fnav_to.do%3Furi%3D%252Fdiscovery_status.do%253Fsys_id%253Db206fc7fdba4059455d70dcbd396192e%2526sysparm_record_target%253Ddiscovery_status%2526sysparm_record_row%253D1%2526sysparm_record_rows%253D1%2526sysparm_record_list%253Dsys_id%25253Db206fc7fdba4059455d70dcbd396192e%25255EORDERBYDESCsys_updated_on" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -10519,67 +10609,25 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://contile.services.mozilla.com/v1/tiles" enabled="true">
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-                <collectionProp name="Arguments.arguments"/>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain">contile.services.mozilla.com</stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.protocol">https</stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">v1/tiles</stringProp>
-              <stringProp name="HTTPSampler.method">GET</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-                <collectionProp name="HeaderManager.headers">
-                  <elementProp name="Host" elementType="Header">
-                    <stringProp name="Header.name">Host</stringProp>
-                    <stringProp name="Header.value">contile.services.mozilla.com</stringProp>
-                  </elementProp>
-                  <elementProp name="User-Agent" elementType="Header">
-                    <stringProp name="Header.name">User-Agent</stringProp>
-                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
-                  </elementProp>
-                  <elementProp name="Accept" elementType="Header">
-                    <stringProp name="Header.name">Accept</stringProp>
-                    <stringProp name="Header.value">*/*</stringProp>
-                  </elementProp>
-                  <elementProp name="Accept-Language" elementType="Header">
-                    <stringProp name="Header.name">Accept-Language</stringProp>
-                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
-                  </elementProp>
-                  <elementProp name="Accept-Encoding" elementType="Header">
-                    <stringProp name="Header.name">Accept-Encoding</stringProp>
-                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
-                  </elementProp>
-                  <elementProp name="Connection" elementType="Header">
-                    <stringProp name="Header.name">Connection</stringProp>
-                    <stringProp name="Header.value">keep-alive</stringProp>
-                  </elementProp>
-                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
-                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
-                    <stringProp name="Header.value">empty</stringProp>
-                  </elementProp>
-                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
-                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
-                    <stringProp name="Header.value">cors</stringProp>
-                  </elementProp>
-                  <elementProp name="Sec-Fetch-Site" elementType="Header">
-                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
-                    <stringProp name="Header.value">cross-site</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </HeaderManager>
-              <hashTree/>
-            </hashTree>
+            <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="TC01_StatusFlag_JSR223_script" enabled="true">
+              <stringProp name="scriptLanguage">beanshell</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">boolean tC01_Flag=false;
+if(vars.get(&quot;Disc_Status_Validation&quot;).equalsIgnoreCase(&quot;Completed&quot;))
+if(vars.get(&quot;Disc_Status_Validation&quot;).equalsIgnoreCase(&quot;Completed&quot;)||vars.get(&quot;Disc_Status_Validation&quot;).equalsIgnoreCase(&quot;Starting&quot;)||vars.get(&quot;Disc_Status_Validation&quot;).equalsIgnoreCase(&quot;Active&quot;)){
+	
+
+tC01_Flag=true;
+vars.put(&quot;tC01_Flag&quot;,&quot;true&quot;);	
+}
+else{
+tC01_Flag=false;	
+vars.put(&quot;tC01_Flag&quot;,&quot;false&quot;);
+}</stringProp>
+            </JSR223Listener>
+            <hashTree/>
             <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 script" enabled="true">
               <stringProp name="scriptLanguage">beanshell</stringProp>
               <stringProp name="parameters"></stringProp>
@@ -10610,12 +10658,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-p.println(&quot;T08_DiscoveryStatus,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+p.println(&quot;TC01_DiscNow_T08_DiscoveryStatus,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;T08_DiscoveryStatus,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T08_DiscoveryStatus,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -10631,11 +10679,11 @@ f.close();</stringProp>
             </JSR223Listener>
             <hashTree/>
           </hashTree>
-          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="TC01_DiscNow_T09_WhileController" enabled="true">
             <stringProp name="WhileController.condition">${__jexl3(&quot;${Disc_Status_Validation}&quot;!=&quot;Completed&quot;)}</stringProp>
           </WhileController>
           <hashTree>
-            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T08_ClickDiscLink" enabled="true">
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC01_DiscNow_T08_DiscoveryStatus" enabled="true">
               <boolProp name="TransactionController.includeTimers">false</boolProp>
               <boolProp name="TransactionController.parent">true</boolProp>
             </TransactionController>
@@ -10836,7 +10884,22 @@ f.close();</stringProp>
                   </collectionProp>
                 </HeaderManager>
                 <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Discovery_Status_RegularExpression_Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">Disc_Status_Validation</stringProp>
+                  <stringProp name="RegexExtractor.regex">name=&quot;sys_original.discovery_status.state&quot; value=&quot;(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NoMatch</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
               </hashTree>
+              <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                <boolProp name="displayJMeterProperties">false</boolProp>
+                <boolProp name="displayJMeterVariables">true</boolProp>
+                <boolProp name="displaySystemProperties">false</boolProp>
+              </DebugSampler>
+              <hashTree/>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/images/s.gif" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments"/>
@@ -11412,67 +11475,23 @@ f.close();</stringProp>
                 </HeaderManager>
                 <hashTree/>
               </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://contile.services.mozilla.com/v1/tiles" enabled="true">
-                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-                  <collectionProp name="Arguments.arguments"/>
-                </elementProp>
-                <stringProp name="HTTPSampler.domain">contile.services.mozilla.com</stringProp>
-                <stringProp name="HTTPSampler.port"></stringProp>
-                <stringProp name="HTTPSampler.protocol">https</stringProp>
-                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-                <stringProp name="HTTPSampler.path">v1/tiles</stringProp>
-                <stringProp name="HTTPSampler.method">GET</stringProp>
-                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-                <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              </HTTPSamplerProxy>
-              <hashTree>
-                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-                  <collectionProp name="HeaderManager.headers">
-                    <elementProp name="Host" elementType="Header">
-                      <stringProp name="Header.name">Host</stringProp>
-                      <stringProp name="Header.value">contile.services.mozilla.com</stringProp>
-                    </elementProp>
-                    <elementProp name="User-Agent" elementType="Header">
-                      <stringProp name="Header.name">User-Agent</stringProp>
-                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
-                    </elementProp>
-                    <elementProp name="Accept" elementType="Header">
-                      <stringProp name="Header.name">Accept</stringProp>
-                      <stringProp name="Header.value">*/*</stringProp>
-                    </elementProp>
-                    <elementProp name="Accept-Language" elementType="Header">
-                      <stringProp name="Header.name">Accept-Language</stringProp>
-                      <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
-                    </elementProp>
-                    <elementProp name="Accept-Encoding" elementType="Header">
-                      <stringProp name="Header.name">Accept-Encoding</stringProp>
-                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
-                    </elementProp>
-                    <elementProp name="Connection" elementType="Header">
-                      <stringProp name="Header.name">Connection</stringProp>
-                      <stringProp name="Header.value">keep-alive</stringProp>
-                    </elementProp>
-                    <elementProp name="Sec-Fetch-Dest" elementType="Header">
-                      <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
-                      <stringProp name="Header.value">empty</stringProp>
-                    </elementProp>
-                    <elementProp name="Sec-Fetch-Mode" elementType="Header">
-                      <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
-                      <stringProp name="Header.value">cors</stringProp>
-                    </elementProp>
-                    <elementProp name="Sec-Fetch-Site" elementType="Header">
-                      <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
-                      <stringProp name="Header.value">cross-site</stringProp>
-                    </elementProp>
-                  </collectionProp>
-                </HeaderManager>
-                <hashTree/>
-              </hashTree>
+              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="TC01_StatusFlag_JSR223_script" enabled="true">
+                <stringProp name="scriptLanguage">beanshell</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">boolean TC01_StatusFlag=false;
+if(vars.get(&quot;Disc_Status_Validation&quot;).equalsIgnoreCase(&quot;Completed&quot;)){
+
+TC01_StatusFlag=true;
+vars.put(&quot;TC01_StatusFlag&quot;,&quot;true&quot;);	
+}
+else{
+TC01_StatusFlag=false;	
+vars.put(&quot;TC01_StatusFlag&quot;,&quot;false&quot;);
+}</stringProp>
+              </JSR223Listener>
+              <hashTree/>
             </hashTree>
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Discovery_Result_ResrAPI" enabled="true">
@@ -11480,7 +11499,7 @@ f.close();</stringProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST_Run_Schedule_(Tieto)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC02_RestAPI_T01_RunSchedulePOST" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
               </elementProp>
@@ -11574,12 +11593,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;Discovery_Result_ResrAPI-POST,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC02_RestAPI_T01_RunSchedulePOST,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;Discovery_Result_ResrAPI-POST,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC02_RestAPI_T01_RunSchedulePOST,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -11595,7 +11614,7 @@ f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET_ScheduleResult(Tieto)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC03_RestAPI_T02_GetScheduleResultGET" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
               </elementProp>
@@ -11633,7 +11652,7 @@ f.close();</stringProp>
               <hashTree/>
               <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
                 <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                <stringProp name="RegexExtractor.refname">State</stringProp>
+                <stringProp name="RegexExtractor.refname">Discovery_State</stringProp>
                 <stringProp name="RegexExtractor.regex">&quot;state&quot;:&quot;(.+?)&quot;</stringProp>
                 <stringProp name="RegexExtractor.template">$1$</stringProp>
                 <stringProp name="RegexExtractor.default">NoMatch</stringProp>
@@ -11728,7 +11747,25 @@ f.close();</stringProp>
                 <boolProp name="ISREGEX">true</boolProp>
               </JSONPathAssertion>
               <hashTree/>
-              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 script" enabled="true">
+              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="TC03_RestAPI_T02_JSR223_script" enabled="true">
+                <stringProp name="scriptLanguage">beanshell</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">boolean TC03_StatusFlagPost=false;
+
+if(vars.get(&quot;Discovery_State&quot;).equalsIgnoreCase(&quot;Completed&quot;)||vars.get(&quot;Discovery_State&quot;).equalsIgnoreCase(&quot;Starting&quot;)||vars.get(&quot;Discovery_State&quot;).equalsIgnoreCase(&quot;Active&quot;)){
+
+TC03_StatusFlagPost=true;
+vars.put(&quot;TC03_StatusFlagPost&quot;,&quot;true&quot;);
+}
+else{
+TC03_StatusFlagPost=false;
+vars.put(&quot;TC03_StatusFlagPost&quot;,&quot;false&quot;);	
+}</stringProp>
+              </JSR223Listener>
+              <hashTree/>
+              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="TC03_RestAPI_JSR223 script" enabled="true">
                 <stringProp name="scriptLanguage">beanshell</stringProp>
                 <stringProp name="parameters"></stringProp>
                 <stringProp name="filename"></stringProp>
@@ -11758,12 +11795,12 @@ this.interpreter.setOut(p);
   			}
     else 		{    			}}
 if(flag==false){
-	p.println(&quot;Discovery_Result_ResrAPI-GET,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;TC03_RestAPI_T02_GetScheduleResultGET,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
 	ctx.getThread().stop();
 }
 else
 {
-p.println(&quot;Discovery_Result_ResrAPI-GET,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC03_RestAPI_T02_GetScheduleResultGET,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 for (AssertionResult assertionResult : assertionResults) {
@@ -11772,8 +11809,7 @@ if (assertionResult.isFailure())
 p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
 }
 else 		
-{
-    			}
+{}
 }
 f.close();</stringProp>
               </JSR223Listener>
@@ -11823,7 +11859,7 @@ f.close();</stringProp>
             </DebugSampler>
             <hashTree/>
             <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
-              <stringProp name="WhileController.condition">${__jexl3(&quot;${State}&quot;!=&quot;Completed&quot;)}</stringProp>
+              <stringProp name="WhileController.condition">${__jexl3(&quot;${Discovery_State}&quot;!=&quot;Completed&quot;)}</stringProp>
             </WhileController>
             <hashTree>
               <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
@@ -11868,7 +11904,7 @@ f.close();</stringProp>
                 <hashTree/>
                 <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-                  <stringProp name="RegexExtractor.refname">State</stringProp>
+                  <stringProp name="RegexExtractor.refname">Discovery_State</stringProp>
                   <stringProp name="RegexExtractor.regex">&quot;state&quot;:&quot;(.+?)&quot;</stringProp>
                   <stringProp name="RegexExtractor.template">$1$</stringProp>
                   <stringProp name="RegexExtractor.default">NoMatch</stringProp>
@@ -11944,6 +11980,23 @@ f.close();</stringProp>
                   </collectionProp>
                 </HeaderManager>
                 <hashTree/>
+                <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="TC03_RestAPI_T02_GETJSR223_script" enabled="true">
+                  <stringProp name="scriptLanguage">beanshell</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script">boolean TC03_StatusFlagGET=false;
+if(vars.get(&quot;Discovery_State&quot;).equalsIgnoreCase(&quot;Completed&quot;)){
+
+TC03_StatusFlagGET=true;	
+vars.put(&quot;TC03_StatusFlagGET&quot;,&quot;true&quot;);
+}
+else{
+TC03_StatusFlagGET=false;
+vars.put(&quot;TC03_StatusFlagGET&quot;,&quot;false&quot;);	
+}</stringProp>
+                </JSR223Listener>
+                <hashTree/>
               </hashTree>
               <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
                 <boolProp name="displayJMeterProperties">false</boolProp>
@@ -11952,7 +12005,7 @@ f.close();</stringProp>
               </DebugSampler>
               <hashTree/>
             </hashTree>
-            <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 script" enabled="true">
+            <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 script" enabled="false">
               <stringProp name="scriptLanguage">beanshell</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
@@ -12012,25 +12065,39 @@ f.close();</stringProp>
               <stringProp name="BeanShellSampler.query">import org.apache.jmeter.services.FileServer;
 
 String path=FileServer.getFileServer().getBaseDir();
-String Status;//=&quot;PASSED&quot;;
-String DiscTest;
+boolean flag=true;
 date=vars.get(&quot;Date&quot;);
 Time=vars.get(&quot;Time&quot;);
+
+
+boolean tC01_StatusFlag;
+
+String tC01_Flag = vars.get(&quot;tC01_Flag&quot;);
+String tC03_StatusFlagPost = vars.get(&quot;TC03_StatusFlagPost&quot;);
+String tC03_StatusFlagGET = vars.get(&quot;TC03_StatusFlagGET&quot;);
+String tC01_DiscoveryStatus = vars.get(&quot;SuccessfulDiscovery&quot;);
+
+if(tC01_Flag.equalsIgnoreCase(&quot;true&quot;) &amp;&amp; tC01_DiscoveryStatus.equalsIgnoreCase(&quot;true&quot;)){
+	tC01_StatusFlag = true;
+}else
+{
+	tC01_StatusFlag = false;
+}
 
 f = new FileOutputStream(&quot;C://Jmeter/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/demo1.csv&quot;,true);
 
 p = new PrintStream(f);
-
-System.out.println(vars.get(&quot;Disc_Status_Validation&quot;));
-
 this.interpreter.setOut(p);
 
-if(vars.get(&quot;Disc_Status_Validation&quot;).equalsIgnoreCase(&quot;Completed&quot;)){
 
-p.println(&quot;Disover Now | TEST: PASSED,&quot;+date+&quot;,&quot;+Time);	
+if(tC01_StatusFlag.equals(true) &amp;&amp; tC03_StatusFlagPost.equals(&quot;true&quot;) &amp;&amp; tC03_StatusFlagGET.equals(&quot;true&quot;)){
+
+p.println(&quot;Discovery | TEST: PASSED,&quot;+date+&quot;,&quot;+Time);	
+
 }
 else{
-p.println(&quot;Disover Now | TEST: FAILED,&quot;+date+&quot;,&quot;+Time);	
+
+p.println(&quot;Discovery | TEST: FAILED,&quot;+date+&quot;,&quot;+Time);	
 }
 
 f.close();</stringProp>
