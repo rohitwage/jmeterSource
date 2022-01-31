@@ -414,24 +414,28 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T01_LaunchURL,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T01_LaunchURL,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
 p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
 }
 else 		
-{
-    			}
+{}
+}    
+    
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T01_LaunchURL,&quot;+&quot;Launch URL,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
 }
+else
+{
+p.println(&quot;TC01_DiscNow_T01_LaunchURL,&quot;+&quot;Launch URL,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -2401,15 +2405,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+    
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -2419,6 +2415,18 @@ else
 {
     			}
 }
+
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+&quot;Click on Login,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+&quot;Click on Login&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -3311,14 +3319,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	ctx.getThread().stop();
-}
-else
-{
 
-	
-}
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -3328,6 +3329,17 @@ else
 {
     			}
 }
+
+if(flag==false){
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);
+	ctx.getThread().stop();
+}
+else
+{
+
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -3680,13 +3692,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-ctx.getThread().stop();
-}
-else
-{
-	
-}
+    
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -3696,6 +3702,16 @@ else
 {
     			}
 }
+ 
+if(flag==false){
+p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+ctx.getThread().stop();
+}
+else
+{
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -4275,6 +4291,7 @@ f.close();</stringProp>
                     <stringProp name="Argument.name">1.ni.nolog.x_referer</stringProp>
                     <stringProp name="Argument.value">ignore</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="0.sysparm_processor" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
@@ -4528,7 +4545,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/86e2b63bdb98059055d70dcbd39619be" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/86e2b63bdb98059055d70dcbd39619be" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -4603,6 +4620,98 @@ f.close();</stringProp>
                   <elementProp name="DNT" elementType="Header">
                     <stringProp name="Header.name">DNT</stringProp>
                     <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/0c1bbcb3db41891055d70dcbd396196a" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;&quot;,&quot;form_name&quot;:&quot;home&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:11214,&quot;browser_server_time&quot;:5863,&quot;network_time&quot;:11,&quot;browser_time&quot;:5340,&quot;client_script_time&quot;:0,&quot;policy_time&quot;:0,&quot;client_details&quot;:&quot;[]&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">api/now/ui/page_timing/0c1bbcb3db41891055d70dcbd396196a</stringProp>
+              <stringProp name="HTTPSampler.method">PATCH</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/home.do?</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">212</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
                   <elementProp name="Connection" elementType="Header">
                     <stringProp name="Header.name">Connection</stringProp>
@@ -5403,15 +5512,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T03_ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T03_ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -5421,6 +5522,18 @@ else
 {
     			}
 }
+  
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T03_ClickFvrt,&quot;+&quot;ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T03_ClickFvrt,&quot;+&quot;ClickFvrt,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -5616,15 +5729,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T04_ClickDiscoverySche,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T04_ClickDiscoverySche,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -5633,6 +5738,17 @@ p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
 else 		
 {
     			}
+}
+ 
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T04_ClickDiscoverySche,&quot;+&quot;Click Discovery Schedules,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T04_ClickDiscoverySche,&quot;+&quot;Click Discovery Schedules,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
 }
 f.close();</stringProp>
               </JSR223Listener>
@@ -5946,7 +6062,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/8b537e33dbd8059055d70dcbd3961962" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/8b537e33dbd8059055d70dcbd3961962" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -6018,9 +6134,97 @@ f.close();</stringProp>
                     <stringProp name="Header.name">Origin</stringProp>
                     <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
-                  <elementProp name="DNT" elementType="Header">
-                    <stringProp name="Header.name">DNT</stringProp>
-                    <stringProp name="Header.value">1</stringProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/6ebf70ffdbc5891055d70dcbd396190f" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;discovery_schedule&quot;,&quot;form_name&quot;:&quot;sys_list_template2&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:2995,&quot;browser_server_time&quot;:2840,&quot;network_time&quot;:8,&quot;browser_time&quot;:147,&quot;client_script_time&quot;:0,&quot;policy_time&quot;:0,&quot;client_details&quot;:&quot;[]&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">api/now/ui/page_timing/6ebf70ffdbc5891055d70dcbd396190f</stringProp>
+              <stringProp name="HTTPSampler.method">PATCH</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_schedule_list.do?sysparm_userpref_module=9dbf10f40a0a070300212ec4c69443ad&amp;sysparm_clear_stack=true</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">241</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
                   <elementProp name="Connection" elementType="Header">
                     <stringProp name="Header.name">Connection</stringProp>
@@ -6619,15 +6823,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T05_SearchAutomatedAndClick,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T05_SearchAutomatedAndClick,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -6637,6 +6833,18 @@ else
 {
     			}
 }
+   
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T05_SearchAutomatedAndClick,&quot;+&quot;Search Automated,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T05_SearchAutomatedAndClick,&quot;+&quot;Search Automated,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -6820,7 +7028,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/9683b2fbdb98059055d70dcbd3961975" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/api/now/ui/page_timing/9683b2fbdb98059055d70dcbd3961975" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -6846,7 +7054,7 @@ f.close();</stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="false">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Host" elementType="Header">
                     <stringProp name="Header.name">Host</stringProp>
@@ -6886,15 +7094,168 @@ f.close();</stringProp>
                   </elementProp>
                   <elementProp name="Content-Length" elementType="Header">
                     <stringProp name="Header.name">Content-Length</stringProp>
-                    <stringProp name="Header.value">242</stringProp>
+                    <stringProp name="Header.value">243</stringProp>
                   </elementProp>
                   <elementProp name="Origin" elementType="Header">
                     <stringProp name="Header.name">Origin</stringProp>
                     <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
-                  <elementProp name="DNT" elementType="Header">
-                    <stringProp name="Header.name">DNT</stringProp>
-                    <stringProp name="Header.value">1</stringProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="New HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_schedule_list.do?sysparm_first_row=1&amp;sysparm_query=GOTOnameLIKEautomated&amp;sysparm_query_encoded=GOTOnameLIKEautomated&amp;sysparm_view=</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">243</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/cb8e0937dbc5c91055d70dcbd3961915" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;discovery_schedule&quot;,&quot;form_name&quot;:&quot;sys_list_template2&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:2075,&quot;browser_server_time&quot;:763,&quot;network_time&quot;:1181,&quot;browser_time&quot;:131,&quot;client_script_time&quot;:0,&quot;policy_time&quot;:0,&quot;client_details&quot;:&quot;[]&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">api/now/ui/page_timing/cb8e0937dbc5c91055d70dcbd3961915</stringProp>
+              <stringProp name="HTTPSampler.method">PATCH</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="New HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_schedule_list.do?sysparm_first_row=1&amp;sysparm_query=GOTOnameLIKEautomated&amp;sysparm_query_encoded=GOTOnameLIKEautomated&amp;sysparm_view=</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">243</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
                   <elementProp name="Connection" elementType="Header">
                     <stringProp name="Header.name">Connection</stringProp>
@@ -7305,15 +7666,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -7323,6 +7676,18 @@ else
 {
     			}
 }
+    
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T06_Click_Automated_SearchResult,&quot;+&quot;Click on Automated from search result,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T06_Click_Automated_SearchResult,&quot;+&quot;Click on Automated from search result,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -8226,7 +8591,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/0aa3367fdb98059055d70dcbd39619a6" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old_https://tietoci.service-now.com/api/now/ui/page_timing/0aa3367fdb98059055d70dcbd39619a6" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -8301,6 +8666,98 @@ f.close();</stringProp>
                   <elementProp name="DNT" elementType="Header">
                     <stringProp name="Header.name">DNT</stringProp>
                     <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/22b0d9b7db45c91055d70dcbd39619cb" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;discovery_schedule&quot;,&quot;form_name&quot;:&quot;sys_form_template&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:7700,&quot;browser_server_time&quot;:5223,&quot;network_time&quot;:6,&quot;browser_time&quot;:2471,&quot;client_script_time&quot;:5,&quot;policy_time&quot;:14,&quot;client_details&quot;:&quot;[{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Discover - Configuration items, Show MID Select Method field\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;55fb29087f3022008c5abb87adfa91df\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Control visibility of CI type field\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;19803882c30231003e76741e81d3aeae\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Monthly\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;3e0e143a47422100fc856f2ccee4907e\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Hide Service Table and Service Group Table\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;4cf0a3887f2323001952baf8befa91c8\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Control visibility of Service Attributes field\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;501e93087f2323001952baf8befa9133\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Run After\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;50d0244347022100fc856f2ccee49059\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Control Advanced Options\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;5c35075d7fd122005889bb87adfa91a6\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Weekly\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;752d103a47422100fc856f2ccee49042\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Run Type\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;a460f352ef63110098d5925495c0fb1e\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Control the visiblity of service discovery type\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;ba6fa482c30231003e76741e81d3ae6d\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Control visibility of Specific CI field\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;c6dfe482c30231003e76741e81d3ae83\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Control location and include fields\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;c9bfb8310ab3015200f1c738d4427805\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Run Periodically\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;cc0cd8f647422100fc856f2ccee4901a\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Starting\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;e931547647422100fc856f2ccee49029\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Control visibility of Service Group Attributes field\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;f06f93487f2323001952baf8befa91fe\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Display Time\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;62a69cb647422100fc856f2ccee49024\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Discover - Configuration items, Mid Selection - Specific MID\&quot;,\&quot;duration\&quot;:3,\&quot;sys_id\&quot;:\&quot;c99c220d0ab3015200ec15a8e7afb10d\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Display Time Zone\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;0cb11b1f771f3300bf05d4082b1061b5\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Starting\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;101f33d90a0a0b2c0036f9822060626c\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Run Periodically\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;43458cb5a681268d005c0944d45ed370\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display Business Calendar\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;4d8604679322330083171d1e867ffb73\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Show Offset for Business Calendar\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;6221f17f474100106b8417366b9a713c\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Show and make mandatory parent when Run is After Parent Runs and Active is true\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;6348cc960a0a0b13007d517c63da8d29\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display weekly\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;6349e4910a0a0b13007126d8b698ea56\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display monthly\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;634a8e990a0a0b1300047d3de95818e5\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Show Offset Type for Business Calendar\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;662a9ed373230010beb96fbc1bf6a71a\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Display Entered Time\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;8f1d8f1b771f3300bf05d4082b1061b3\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Show condition when Conditional is true\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;93fd926fc0a8016801c0bfa46f876e80\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Display domain lookup fields if box is checked\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;a6f600bc0f27001043d1bbe9c4767e07\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;RelatedList Toggle Function\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;10e71aa397332100e4c3955fda2975e9\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;GL Display GuideLinter\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;2a1f8c31db202200cbc9f7fdbf96192a\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;calcReturn\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;2bf56855a9fe156100d09e8a53b63ea9\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Hide Discover Choices\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;2e5adfa197332100e4c3955fda297581\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Iterator Info Icon\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;31c04bd10f63001043d1bbe9c4767efd\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Replace Pattern Link for NG\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;5a2787c39f232200904f91aec32e70c9\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Warn if MID Selection field is missing\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;be497b627f102200ce27bb87adfa9188\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Generate Alert\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;c8b72971c3363000ad408039dfba8fc5\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot; cloud resources option\&quot;,\&quot;duration\&quot;:1,\&quot;sys_id\&quot;:\&quot;f233723d0b9723003bace58525673a4b\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;}]&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">api/now/ui/page_timing/22b0d9b7db45c91055d70dcbd39619cb</stringProp>
+              <stringProp name="HTTPSampler.method">PATCH</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_schedule.do?sys_id=03f984e31b5b7090b05b657f7b4bcbad&amp;sysparm_record_target=discovery_schedule&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=nameCONTAINSautomated%5EORDERBYname</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">8575</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
                   <elementProp name="Connection" elementType="Header">
                     <stringProp name="Header.name">Connection</stringProp>
@@ -8414,7 +8871,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="false">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="partial_page" elementType="HTTPArgument">
@@ -8574,10 +9031,6 @@ f.close();</stringProp>
                     <stringProp name="Header.name">Origin</stringProp>
                     <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
                   </elementProp>
-                  <elementProp name="DNT" elementType="Header">
-                    <stringProp name="Header.name">DNT</stringProp>
-                    <stringProp name="Header.value">1</stringProp>
-                  </elementProp>
                   <elementProp name="Connection" elementType="Header">
                     <stringProp name="Header.name">Connection</stringProp>
                     <stringProp name="Header.value">keep-alive</stringProp>
@@ -8674,15 +9127,8 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	ctx.getThread().stop();
-	//p.println(&quot;T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-}
-else
-{
-//p.println(&quot;T06_ClickSearchResult_Automated_Result,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -8692,6 +9138,301 @@ else
 {
     			}
 }
+    
+
+ if(flag==false){
+	
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+	
+}
+
+f.close();</stringProp>
+              </JSR223Listener>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="partial_page" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">partial_page</stringProp>
+                    <stringProp name="Argument.value">related_lists</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_scope" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_scope</stringProp>
+                    <stringProp name="Argument.value">global</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_want_session_messages" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_want_session_messages</stringProp>
+                    <stringProp name="Argument.value">true</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_embedded" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_embedded</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_keep_related_lists_open" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_keep_related_lists_open</stringProp>
+                    <stringProp name="Argument.value">true</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_table" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_table</stringProp>
+                    <stringProp name="Argument.value">discovery_schedule</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_stack" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_stack</stringProp>
+                    <stringProp name="Argument.value">no</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_view" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_view</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_domain" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_domain</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="x_referer" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">x_referer</stringProp>
+                    <stringProp name="Argument.value">discovery_schedule.do?sys_id=03f984e31b5b7090b05b657f7b4bcbad&amp;sysparm_record_target=discovery_schedule&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=nameCONTAINSautomated%5EORDERBYname</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_sys_id" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_sys_id</stringProp>
+                    <stringProp name="Argument.value">03f984e31b5b7090b05b657f7b4bcbad</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_processor" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_processor</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_domain_scope" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_domain_scope</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="ni.nolog.x_referer" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">ni.nolog.x_referer</stringProp>
+                    <stringProp name="Argument.value">ignore</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">list2_deferred_related_lists.do</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_schedule.do?sys_id=03f984e31b5b7090b05b657f7b4bcbad&amp;sysparm_record_target=discovery_schedule&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=nameCONTAINSautomated%5EORDERBYname</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">566</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <url>true</url>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="IP_Assertion" enabled="false">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="1838324166">44.133.34.47, 44.133.92.47</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 Listener" enabled="true">
+                <stringProp name="scriptLanguage">beanshell</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import org.apache.jmeter.services.FileServer;
+import org.apache.jmeter.assertions.AssertionResult;
+
+String path=FileServer.getFileServer().getBaseDir();
+boolean flag=true;
+
+date=vars.get(&quot;Date&quot;);
+Time=vars.get(&quot;Time&quot;);
+
+f = new FileOutputStream(&quot;C://Jmeter/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/demo1.csv&quot;,true);
+
+p = new PrintStream(f);
+
+this.interpreter.setOut(p);
+
+	AssertionResult[] assertionResults = prev.getAssertionResults();
+
+	for (AssertionResult assertionResult : assertionResults) {
+    			if (assertionResult.isFailure()) 
+    			{
+    				
+    			flag=false;
+    			break; 
+  			}
+    else 		{    			}}
+
+
+for (AssertionResult assertionResult : assertionResults) {
+if (assertionResult.isFailure()) 
+{
+p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
+}
+else 		
+{
+    			}
+}
+    
+
+ if(flag==false){
+	
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -9271,7 +10012,7 @@ vars.put(&quot;Status&quot;,&quot;PASSED&quot;);</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=b206fc7fdba4059455d70dcbd396192e" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=b206fc7fdba4059455d70dcbd396192e" enabled="false">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="sysparm_query" elementType="HTTPArgument">
@@ -9361,6 +10102,222 @@ vars.put(&quot;Status&quot;,&quot;PASSED&quot;);</stringProp>
                 <boolProp name="XPathExtractor.namespace">false</boolProp>
               </XPathExtractor>
               <hashTree/>
+              <XPathAssertion guiclass="XPathAssertionGui" testclass="XPathAssertion" testname="Status_DiscNow Assertion" enabled="false">
+                <boolProp name="XPath.negate">false</boolProp>
+                <stringProp name="XPath.xpath">//td[@class=&quot;vt&quot;][6]</stringProp>
+                <boolProp name="XPath.validate">false</boolProp>
+                <boolProp name="XPath.whitespace">false</boolProp>
+                <boolProp name="XPath.tolerant">true</boolProp>
+                <boolProp name="XPath.namespace">false</boolProp>
+              </XPathAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="1955883814">Active</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Disc_Now Response code assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 script" enabled="true">
+                <stringProp name="scriptLanguage">beanshell</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import org.apache.jmeter.services.FileServer;
+import org.apache.jmeter.assertions.AssertionResult;
+
+String path=FileServer.getFileServer().getBaseDir();
+boolean flag=true;
+date=vars.get(&quot;Date&quot;);
+Time=vars.get(&quot;Time&quot;);
+
+f = new FileOutputStream(&quot;C://Jmeter/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/demo1.csv&quot;,true);
+
+p = new PrintStream(f);
+
+this.interpreter.setOut(p);
+
+	AssertionResult[] assertionResults = prev.getAssertionResults();
+
+	for (AssertionResult assertionResult : assertionResults) {
+    			if (assertionResult.isFailure()) 
+    			{
+    				
+    			flag=false;
+    			break; 
+  			}
+    else 		{    			}}
+
+for (AssertionResult assertionResult : assertionResults) {
+if (assertionResult.isFailure()) 
+{
+p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
+}
+else 		
+{
+    			}
+}
+    
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+&quot;Click on Discover Now,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+&quot;Click on Discover Now,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
+f.close();</stringProp>
+              </JSR223Listener>
+              <hashTree/>
+              <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>true</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <url>true</url>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=f8591ba91b55819024cceb536b4bcb89" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="sysparm_query" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_query</stringProp>
+                    <stringProp name="Argument.value">sys_id=f8591ba91b55819024cceb536b4bcb89</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">discovery_status_list.do</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_schedule.do?sys_id=03f984e31b5b7090b05b657f7b4bcbad&amp;sysparm_record_target=discovery_schedule&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=nameCONTAINSautomated%5EORDERBYname</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                    <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">iframe</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">navigate</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-User" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                    <stringProp name="Header.value">?1</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+                <stringProp name="RandomTimer.range">408.8</stringProp>
+                <stringProp name="ConstantTimer.delay">817.6</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+              <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Status_DiscNow_XPath Extractor" enabled="true">
+                <stringProp name="XPathExtractor.default">NoMatch</stringProp>
+                <stringProp name="XPathExtractor.refname">Status_DiscNow</stringProp>
+                <stringProp name="XPathExtractor.matchNumber">6</stringProp>
+                <stringProp name="XPathExtractor.xpathQuery">//td[@class=&quot;vt&quot;]</stringProp>
+                <boolProp name="XPathExtractor.validate">false</boolProp>
+                <boolProp name="XPathExtractor.tolerant">true</boolProp>
+                <boolProp name="XPathExtractor.namespace">false</boolProp>
+              </XPathExtractor>
+              <hashTree/>
               <XPathAssertion guiclass="XPathAssertionGui" testclass="XPathAssertion" testname="Status_DiscNow Assertion" enabled="true">
                 <boolProp name="XPath.negate">false</boolProp>
                 <stringProp name="XPath.xpath">//td[@class=&quot;vt&quot;][6]</stringProp>
@@ -9419,15 +10376,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -9437,6 +10386,18 @@ else
 {
     			}
 }
+    
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+&quot;Click on Discover Now,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T07_Click_on_DiscNow,&quot;+&quot;Click on Discover Now,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -9628,7 +10589,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/fa0638331be8c19424cceb536b4bcbfe" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/api/now/ui/page_timing/fa0638331be8c19424cceb536b4bcbfe" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -9695,6 +10656,98 @@ f.close();</stringProp>
                   <elementProp name="Content-Length" elementType="Header">
                     <stringProp name="Header.name">Content-Length</stringProp>
                     <stringProp name="Header.value">237</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/745953e91b1d0590b05b657f7b4bcbb8" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;discovery_status&quot;,&quot;form_name&quot;:&quot;sys_list_template2&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:983,&quot;browser_server_time&quot;:786,&quot;network_time&quot;:19,&quot;browser_time&quot;:178,&quot;client_script_time&quot;:0,&quot;policy_time&quot;:0,&quot;client_details&quot;:&quot;[]&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">api/now/ui/page_timing/745953e91b1d0590b05b657f7b4bcbb8</stringProp>
+              <stringProp name="HTTPSampler.method">PATCH</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=f8591ba91b55819024cceb536b4bcb89</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">238</stringProp>
                   </elementProp>
                   <elementProp name="Origin" elementType="Header">
                     <stringProp name="Header.name">Origin</stringProp>
@@ -9820,7 +10873,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/discovery_status.do?sys_id=b206fc7fdba4059455d70dcbd396192e&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Db206fc7fdba4059455d70dcbd396192e%5EORDERBYDESCsys_updated_on" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="old https://tietoci.service-now.com/discovery_status.do?sys_id=b206fc7fdba4059455d70dcbd396192e&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Db206fc7fdba4059455d70dcbd396192e%5EORDERBYDESCsys_updated_on" enabled="false">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="sys_id" elementType="HTTPArgument">
@@ -9900,6 +10953,115 @@ f.close();</stringProp>
                   <elementProp name="Referer" elementType="Header">
                     <stringProp name="Header.name">Referer</stringProp>
                     <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=b206fc7fdba4059455d70dcbd396192e</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                    <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">iframe</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">navigate</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-User" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                    <stringProp name="Header.value">?1</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="new https://tietoci.service-now.com/discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="sys_id" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sys_id</stringProp>
+                    <stringProp name="Argument.value">a073af251b514590b05b657f7b4bcb76</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_record_rows" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_record_rows</stringProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_record_target" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_record_target</stringProp>
+                    <stringProp name="Argument.value">discovery_status</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_record_list" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_record_list</stringProp>
+                    <stringProp name="Argument.value">sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_record_row" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_record_row</stringProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">discovery_status.do</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=a073af251b514590b05b657f7b4bcb76</stringProp>
                   </elementProp>
                   <elementProp name="Connection" elementType="Header">
                     <stringProp name="Header.name">Connection</stringProp>
@@ -10159,7 +11321,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/b83630771be8c19424cceb536b4bcbb7" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/api/now/ui/page_timing/b83630771be8c19424cceb536b4bcbb7" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -10251,7 +11413,7 @@ f.close();</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="false">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="partial_page" elementType="HTTPArgument">
@@ -10521,6 +11683,429 @@ System.out.println(&quot;Successful Discovery :&quot;+SuccessfulDiscovery);
               </BeanShellPostProcessor>
               <hashTree/>
             </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/498327251b514590b05b657f7b4bcb67" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;discovery_status&quot;,&quot;form_name&quot;:&quot;sys_form_template&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:2075,&quot;browser_server_time&quot;:1721,&quot;network_time&quot;:13,&quot;browser_time&quot;:341,&quot;client_script_time&quot;:0,&quot;policy_time&quot;:4,&quot;client_details&quot;:&quot;[{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Make mode and credential-less fields read-only...\&quot;,\&quot;duration\&quot;:2,\&quot;sys_id\&quot;:\&quot;084798080a0a0b4700e191f79010fcd2\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Service Discovery Related Lists\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;8e6450597f7432008f1c3b19befa9131\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Schedule field read only in case of Refresh processes and connections\&quot;,\&quot;duration\&quot;:2,\&quot;sys_id\&quot;:\&quot;94dfccea7f3022005598baf8befa9170\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;GL Display GuideLinter\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;2a1f8c31db202200cbc9f7fdbf96192a\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;calcReturn\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;2bf56855a9fe156100d09e8a53b63ea9\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Generate Alert\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;c8b72971c3363000ad408039dfba8fc5\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;lated lists\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;e6f4b85fdb64c094ff0171468c961925\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;}]&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">api/now/ui/page_timing/498327251b514590b05b657f7b4bcb67</stringProp>
+              <stringProp name="HTTPSampler.method">PATCH</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="X-Requested-With" elementType="Header">
+                    <stringProp name="Header.name">X-Requested-With</stringProp>
+                    <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">1741</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="partial_page" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">partial_page</stringProp>
+                    <stringProp name="Argument.value">related_lists</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_scope" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_scope</stringProp>
+                    <stringProp name="Argument.value">global</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_want_session_messages" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_want_session_messages</stringProp>
+                    <stringProp name="Argument.value">true</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_embedded" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_embedded</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_keep_related_lists_open" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_keep_related_lists_open</stringProp>
+                    <stringProp name="Argument.value">true</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_table" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_table</stringProp>
+                    <stringProp name="Argument.value">discovery_status</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_stack" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_stack</stringProp>
+                    <stringProp name="Argument.value">no</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_view" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_view</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_domain" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_domain</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="x_referer" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">x_referer</stringProp>
+                    <stringProp name="Argument.value">discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_sys_id" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_sys_id</stringProp>
+                    <stringProp name="Argument.value">a073af251b514590b05b657f7b4bcb76</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_processor" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_processor</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="sysparm_domain_scope" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">sysparm_domain_scope</stringProp>
+                    <stringProp name="Argument.value"></stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                  <elementProp name="ni.nolog.x_referer" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                    <stringProp name="Argument.name">ni.nolog.x_referer</stringProp>
+                    <stringProp name="Argument.value">ignore</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">list2_deferred_related_lists.do</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">596</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Host" elementType="Header">
+                    <stringProp name="Header.name">Host</stringProp>
+                    <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Language" elementType="Header">
+                    <stringProp name="Header.name">Accept-Language</stringProp>
+                    <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept-Encoding" elementType="Header">
+                    <stringProp name="Header.name">Accept-Encoding</stringProp>
+                    <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                  </elementProp>
+                  <elementProp name="Referer" elementType="Header">
+                    <stringProp name="Header.name">Referer</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status.do?sys_id=b206fc7fdba4059455d70dcbd396192e&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Db206fc7fdba4059455d70dcbd396192e%5EORDERBYDESCsys_updated_on</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Type" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                  </elementProp>
+                  <elementProp name="X-UserToken" elementType="Header">
+                    <stringProp name="Header.name">X-UserToken</stringProp>
+                    <stringProp name="Header.value">${userToken2}</stringProp>
+                  </elementProp>
+                  <elementProp name="Content-Length" elementType="Header">
+                    <stringProp name="Header.name">Content-Length</stringProp>
+                    <stringProp name="Header.value">596</stringProp>
+                  </elementProp>
+                  <elementProp name="Origin" elementType="Header">
+                    <stringProp name="Header.name">Origin</stringProp>
+                    <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                  </elementProp>
+                  <elementProp name="Connection" elementType="Header">
+                    <stringProp name="Header.name">Connection</stringProp>
+                    <stringProp name="Header.value">keep-alive</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                    <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                    <stringProp name="Header.value">cors</stringProp>
+                  </elementProp>
+                  <elementProp name="Sec-Fetch-Site" elementType="Header">
+                    <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                    <stringProp name="Header.value">same-origin</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Devices_" enabled="true">
+                <stringProp name="XPathExtractor.default">NoMatch</stringProp>
+                <stringProp name="XPathExtractor.refname">Device</stringProp>
+                <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
+                <stringProp name="XPathExtractor.xpathQuery">//table[@id=&quot;discovery_status.discovery_device_history.status_table&quot;]/tbody[@class=&quot;list2_body&quot;]/tr/td[3]/a</stringProp>
+                <boolProp name="XPathExtractor.validate">false</boolProp>
+                <boolProp name="XPathExtractor.tolerant">true</boolProp>
+                <boolProp name="XPathExtractor.namespace">false</boolProp>
+              </XPathExtractor>
+              <hashTree/>
+              <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Completed_activities" enabled="true">
+                <stringProp name="XPathExtractor.default">NoMatch</stringProp>
+                <stringProp name="XPathExtractor.refname">Completed_activity</stringProp>
+                <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
+                <stringProp name="XPathExtractor.xpathQuery">//table[@id=&quot;discovery_status.discovery_device_history.status_table&quot;]/tbody[@class=&quot;list2_body&quot;]/tr/td[7]</stringProp>
+                <boolProp name="XPathExtractor.validate">false</boolProp>
+                <boolProp name="XPathExtractor.tolerant">true</boolProp>
+                <boolProp name="XPathExtractor.namespace">false</boolProp>
+              </XPathExtractor>
+              <hashTree/>
+              <XPathAssertion guiclass="XPathAssertionGui" testclass="XPathAssertion" testname="Devcies_Validations" enabled="true">
+                <boolProp name="XPath.negate">false</boolProp>
+                <stringProp name="XPath.xpath">//table[@id=&quot;discovery_status.discovery_device_history.status_table&quot;]/tbody[@class=&quot;list2_body&quot;]/tr[1]/td[3]/a</stringProp>
+                <boolProp name="XPath.validate">false</boolProp>
+                <boolProp name="XPath.whitespace">false</boolProp>
+                <boolProp name="XPath.tolerant">true</boolProp>
+                <boolProp name="XPath.namespace">false</boolProp>
+              </XPathAssertion>
+              <hashTree/>
+              <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>true</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <url>true</url>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script">System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_1&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_1&quot;));
+System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_2&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_2&quot;));
+System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_3&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_3&quot;));
+System.out.println(&quot;Completed activity : &quot;+vars.get(&quot;Device_4&quot;)+&quot; : &quot;+vars.get(&quot;Completed_activity_4&quot;));
+
+boolean SuccessfulDiscovery;
+if(vars.get(&quot;Completed_activity_1&quot;).equals(&quot;Updated CI&quot;)&amp;&amp;vars.get(&quot;Completed_activity_2&quot;).equals(&quot;Updated CI&quot;)&amp;&amp;vars.get(&quot;Completed_activity_3&quot;).equals(&quot;Updated CI&quot;)&amp;&amp;vars.get(&quot;Completed_activity_4&quot;).equals(&quot;Updated CI&quot;))
+{
+	SuccessfulDiscovery = true;
+	vars.put(&quot;SuccessfulDiscovery&quot;,&quot;true&quot;);
+	
+}else{
+SuccessfulDiscovery=false;
+vars.put(&quot;SuccessfulDiscovery&quot;,&quot;false&quot;);
+}
+
+System.out.println(&quot;Successful Discovery :&quot;+SuccessfulDiscovery);
+</stringProp>
+              </BeanShellPostProcessor>
+              <hashTree/>
+            </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/guided_tours/tours?page_id=discovery_status&amp;context=%2Fnav_to.do%3Furi%3D%252Fdiscovery_status.do%253Fsys_id%253Db206fc7fdba4059455d70dcbd396192e%2526sysparm_record_target%253Ddiscovery_status%2526sysparm_record_row%253D1%2526sysparm_record_rows%253D1%2526sysparm_record_list%253Dsys_id%25253Db206fc7fdba4059455d70dcbd396192e%25255EORDERBYDESCsys_updated_on" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments">
@@ -10657,15 +12242,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-p.println(&quot;TC01_DiscNow_T08_DiscoveryStatus,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC01_DiscNow_T08_DiscoveryStatus,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+    
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -10675,6 +12252,17 @@ else
 {
     			}
 }
+if(flag==false){
+	p.println(&quot;TC01_DiscNow_T08_DiscoveryStatus,&quot;+&quot;Discovery Status,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC01_DiscNow_T08_DiscoveryStatus,&quot;+&quot;Discovery Status,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
             </JSR223Listener>
             <hashTree/>
@@ -10776,7 +12364,7 @@ f.close();</stringProp>
                 </HeaderManager>
                 <hashTree/>
               </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/discovery_status.do?sys_id=b206fc7fdba4059455d70dcbd396192e&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Db206fc7fdba4059455d70dcbd396192e%5EORDERBYDESCsys_updated_on" enabled="true">
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/discovery_status.do?sys_id=b206fc7fdba4059455d70dcbd396192e&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Db206fc7fdba4059455d70dcbd396192e%5EORDERBYDESCsys_updated_on" enabled="false">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments">
                     <elementProp name="sys_id" elementType="HTTPArgument">
@@ -10856,6 +12444,124 @@ f.close();</stringProp>
                     <elementProp name="Referer" elementType="Header">
                       <stringProp name="Header.name">Referer</stringProp>
                       <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=b206fc7fdba4059455d70dcbd396192e</stringProp>
+                    </elementProp>
+                    <elementProp name="Connection" elementType="Header">
+                      <stringProp name="Header.name">Connection</stringProp>
+                      <stringProp name="Header.value">keep-alive</stringProp>
+                    </elementProp>
+                    <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                      <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                      <stringProp name="Header.value">1</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                      <stringProp name="Header.value">iframe</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                      <stringProp name="Header.value">navigate</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Site" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                      <stringProp name="Header.value">same-origin</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-User" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                      <stringProp name="Header.value">?1</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Discovery_Status_RegularExpression_Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">Disc_Status_Validation</stringProp>
+                  <stringProp name="RegexExtractor.regex">name=&quot;sys_original.discovery_status.state&quot; value=&quot;(.+?)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">NoMatch</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="new https://tietoci.service-now.com/discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="sys_id" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sys_id</stringProp>
+                      <stringProp name="Argument.value">a073af251b514590b05b657f7b4bcb76</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_record_rows" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_record_rows</stringProp>
+                      <stringProp name="Argument.value">1</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_record_target" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_record_target</stringProp>
+                      <stringProp name="Argument.value">discovery_status</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_record_list" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_record_list</stringProp>
+                      <stringProp name="Argument.value">sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_record_row" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_record_row</stringProp>
+                      <stringProp name="Argument.value">1</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">discovery_status.do</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Host" elementType="Header">
+                      <stringProp name="Header.name">Host</stringProp>
+                      <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                    </elementProp>
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status_list.do?sysparm_query=sys_id=a073af251b514590b05b657f7b4bcb76</stringProp>
                     </elementProp>
                     <elementProp name="Connection" elementType="Header">
                       <stringProp name="Header.name">Connection</stringProp>
@@ -11115,7 +12821,7 @@ f.close();</stringProp>
                 </HeaderManager>
                 <hashTree/>
               </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/api/now/ui/page_timing/b83630771be8c19424cceb536b4bcbb7" enabled="true">
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/api/now/ui/page_timing/b83630771be8c19424cceb536b4bcbb7" enabled="false">
                 <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                   <collectionProp name="Arguments.arguments">
@@ -11207,7 +12913,7 @@ f.close();</stringProp>
                 </HeaderManager>
                 <hashTree/>
               </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="true">
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Old https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="false">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments">
                     <elementProp name="partial_page" elementType="HTTPArgument">
@@ -11350,6 +13056,278 @@ f.close();</stringProp>
                     <elementProp name="Referer" elementType="Header">
                       <stringProp name="Header.name">Referer</stringProp>
                       <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status.do?sys_id=b206fc7fdba4059455d70dcbd396192e&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Db206fc7fdba4059455d70dcbd396192e%5EORDERBYDESCsys_updated_on</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                    </elementProp>
+                    <elementProp name="X-UserToken" elementType="Header">
+                      <stringProp name="Header.name">X-UserToken</stringProp>
+                      <stringProp name="Header.value">${userToken2}</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Length" elementType="Header">
+                      <stringProp name="Header.name">Content-Length</stringProp>
+                      <stringProp name="Header.value">596</stringProp>
+                    </elementProp>
+                    <elementProp name="Origin" elementType="Header">
+                      <stringProp name="Header.name">Origin</stringProp>
+                      <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                    </elementProp>
+                    <elementProp name="Connection" elementType="Header">
+                      <stringProp name="Header.name">Connection</stringProp>
+                      <stringProp name="Header.value">keep-alive</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                      <stringProp name="Header.value">empty</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                      <stringProp name="Header.value">cors</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Site" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                      <stringProp name="Header.value">same-origin</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/api/now/ui/page_timing/498327251b514590b05b657f7b4bcb67" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;table_name&quot;:&quot;discovery_status&quot;,&quot;form_name&quot;:&quot;sys_form_template&quot;,&quot;view_id&quot;:&quot;Default view&quot;,&quot;transaction_time&quot;:2075,&quot;browser_server_time&quot;:1721,&quot;network_time&quot;:13,&quot;browser_time&quot;:341,&quot;client_script_time&quot;:0,&quot;policy_time&quot;:4,&quot;client_details&quot;:&quot;[{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:true,\&quot;name\&quot;:\&quot;Make mode and credential-less fields read-only...\&quot;,\&quot;duration\&quot;:2,\&quot;sys_id\&quot;:\&quot;084798080a0a0b4700e191f79010fcd2\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Service Discovery Related Lists\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;8e6450597f7432008f1c3b19befa9131\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;UIOL\&quot;,\&quot;type\&quot;:\&quot;UI Policy - On Load\&quot;,\&quot;script_detail\&quot;:false,\&quot;name\&quot;:\&quot;Schedule field read only in case of Refresh processes and connections\&quot;,\&quot;duration\&quot;:2,\&quot;sys_id\&quot;:\&quot;94dfccea7f3022005598baf8befa9170\&quot;,\&quot;source_table\&quot;:\&quot;sys_ui_policy\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;GL Display GuideLinter\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;2a1f8c31db202200cbc9f7fdbf96192a\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;calcReturn\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;2bf56855a9fe156100d09e8a53b63ea9\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;Generate Alert\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;c8b72971c3363000ad408039dfba8fc5\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;},{\&quot;type_code\&quot;:\&quot;CSOL\&quot;,\&quot;type\&quot;:\&quot;Client Scripts - On Load\&quot;,\&quot;name\&quot;:\&quot;lated lists\&quot;,\&quot;duration\&quot;:0,\&quot;sys_id\&quot;:\&quot;e6f4b85fdb64c094ff0171468c961925\&quot;,\&quot;source_table\&quot;:\&quot;sys_script_client\&quot;}]&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">api/now/ui/page_timing/498327251b514590b05b657f7b4bcb67</stringProp>
+                <stringProp name="HTTPSampler.method">PATCH</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Host" elementType="Header">
+                      <stringProp name="Header.name">Host</stringProp>
+                      <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                    </elementProp>
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="X-UserToken" elementType="Header">
+                      <stringProp name="Header.name">X-UserToken</stringProp>
+                      <stringProp name="Header.value">${userToken2}</stringProp>
+                    </elementProp>
+                    <elementProp name="X-Requested-With" elementType="Header">
+                      <stringProp name="Header.name">X-Requested-With</stringProp>
+                      <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Length" elementType="Header">
+                      <stringProp name="Header.name">Content-Length</stringProp>
+                      <stringProp name="Header.value">1741</stringProp>
+                    </elementProp>
+                    <elementProp name="Origin" elementType="Header">
+                      <stringProp name="Header.name">Origin</stringProp>
+                      <stringProp name="Header.value">https://tietoci.service-now.com</stringProp>
+                    </elementProp>
+                    <elementProp name="Connection" elementType="Header">
+                      <stringProp name="Header.name">Connection</stringProp>
+                      <stringProp name="Header.value">keep-alive</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                      <stringProp name="Header.value">empty</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                      <stringProp name="Header.value">cors</stringProp>
+                    </elementProp>
+                    <elementProp name="Sec-Fetch-Site" elementType="Header">
+                      <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                      <stringProp name="Header.value">same-origin</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="New https://tietoci.service-now.com/list2_deferred_related_lists.do" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="partial_page" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">partial_page</stringProp>
+                      <stringProp name="Argument.value">related_lists</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_scope" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_scope</stringProp>
+                      <stringProp name="Argument.value">global</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_want_session_messages" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_want_session_messages</stringProp>
+                      <stringProp name="Argument.value">true</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_embedded" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_embedded</stringProp>
+                      <stringProp name="Argument.value"></stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_keep_related_lists_open" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_keep_related_lists_open</stringProp>
+                      <stringProp name="Argument.value">true</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_table" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_table</stringProp>
+                      <stringProp name="Argument.value">discovery_status</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_stack" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_stack</stringProp>
+                      <stringProp name="Argument.value">no</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_view" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_view</stringProp>
+                      <stringProp name="Argument.value"></stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_domain" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_domain</stringProp>
+                      <stringProp name="Argument.value"></stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="x_referer" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">x_referer</stringProp>
+                      <stringProp name="Argument.value">discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_sys_id" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_sys_id</stringProp>
+                      <stringProp name="Argument.value">a073af251b514590b05b657f7b4bcb76</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_processor" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_processor</stringProp>
+                      <stringProp name="Argument.value"></stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="sysparm_domain_scope" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">sysparm_domain_scope</stringProp>
+                      <stringProp name="Argument.value"></stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="ni.nolog.x_referer" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                      <stringProp name="Argument.name">ni.nolog.x_referer</stringProp>
+                      <stringProp name="Argument.value">ignore</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">tietoci.service-now.com</stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">list2_deferred_related_lists.do</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Host" elementType="Header">
+                      <stringProp name="Header.name">Host</stringProp>
+                      <stringProp name="Header.value">tietoci.service-now.com</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">*/*</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                    </elementProp>
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">https://tietoci.service-now.com/discovery_status.do?sys_id=a073af251b514590b05b657f7b4bcb76&amp;sysparm_record_target=discovery_status&amp;sysparm_record_row=1&amp;sysparm_record_rows=1&amp;sysparm_record_list=sys_id%3Da073af251b514590b05b657f7b4bcb76%5EORDERBYDESCsys_updated_on</stringProp>
                     </elementProp>
                     <elementProp name="Content-Type" elementType="Header">
                       <stringProp name="Header.name">Content-Type</stringProp>
@@ -11592,15 +13570,7 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC02_RestAPI_T01_RunSchedulePOST,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC02_RestAPI_T01_RunSchedulePOST,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
+    
 for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
@@ -11610,6 +13580,18 @@ else
 {
     			}
 }
+
+if(flag==false){
+	p.println(&quot;TC02_RestAPI_T01_RunSchedulePOST,&quot;+&quot;Run Schedule- POST API,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC02_RestAPI_T01_RunSchedulePOST,&quot;+&quot;Run Schedule- POST API,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -11794,16 +13776,8 @@ this.interpreter.setOut(p);
     			break; 
   			}
     else 		{    			}}
-if(flag==false){
-	p.println(&quot;TC03_RestAPI_T02_GetScheduleResultGET,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
-	ctx.getThread().stop();
-}
-else
-{
-p.println(&quot;TC03_RestAPI_T02_GetScheduleResultGET,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
-	
-}
-for (AssertionResult assertionResult : assertionResults) {
+    
+ for (AssertionResult assertionResult : assertionResults) {
 if (assertionResult.isFailure()) 
 {
 p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
@@ -11811,6 +13785,18 @@ p.print(&quot;Failed Assertion,&quot;+assertionResult+&quot;\n&quot;);
 else 		
 {}
 }
+if(flag==false){
+	p.println(&quot;TC03_RestAPI_T02_GetScheduleResult,&quot;+&quot;Get Schedule Result- GET API,&quot;+date+&quot;,&quot;+Time+&quot;,Failed&quot;);
+	
+	p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+	ctx.getThread().stop();
+}
+else
+{
+p.println(&quot;TC03_RestAPI_T02_GetScheduleResult- GET API,&quot;+&quot;Get Schedule Result- GET API,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+	
+}
+
 f.close();</stringProp>
               </JSR223Listener>
               <hashTree/>
@@ -12092,12 +14078,12 @@ this.interpreter.setOut(p);
 
 if(tC01_StatusFlag.equals(true) &amp;&amp; tC03_StatusFlagPost.equals(&quot;true&quot;) &amp;&amp; tC03_StatusFlagGET.equals(&quot;true&quot;)){
 
-p.println(&quot;Discovery | TEST: PASSED,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;|&quot;);	
+p.println(&quot;Discovery&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;PASSED&quot;);	
 
 }
 else{
 
-p.println(&quot;Discovery | TEST: FAILED,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;|&quot;);	
+p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
 }
 
 f.close();</stringProp>
