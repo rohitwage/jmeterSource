@@ -2423,7 +2423,7 @@ if(flag==false){
 }
 else
 {
-p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+&quot;Click on Login&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
+p.println(&quot;TC01_DiscNow_T02_ClickLogin,&quot;+&quot;Click on Login,&quot;+date+&quot;,&quot;+Time+&quot;,Passed&quot;);
 	
 }
 
@@ -14078,12 +14078,12 @@ this.interpreter.setOut(p);
 
 if(tC01_StatusFlag.equals(true) &amp;&amp; tC03_StatusFlagPost.equals(&quot;true&quot;) &amp;&amp; tC03_StatusFlagGET.equals(&quot;true&quot;)){
 
-p.println(&quot;Discovery&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;PASSED&quot;);	
+p.println(&quot;Discovery&quot;+&quot;Discovery Test&quot;++date+&quot;,&quot;+Time+&quot;,&quot;+&quot;PASSED&quot;);	
 
 }
 else{
 
-p.println(&quot;Discovery ,&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
+p.println(&quot;Discovery ,&quot;+&quot;Discovery Test&quot;+date+&quot;,&quot;+Time+&quot;,&quot;+&quot;FAILED&quot;);	
 }
 
 f.close();</stringProp>
